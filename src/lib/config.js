@@ -4,9 +4,9 @@ export default {
   // https://expressjs.com/en/guide/behind-proxies.html
   trustProxy: boolOrString(process.env.TRUST_PROXY || 'loopback, linklocal, uniquelocal'),
   // Jacket instance url
-  jackettUrl: process.env.JACKETT_URL || 'http://27.10.130.174:9117/',
+  jackettUrl: process.env.JACKETT_URL || 'http://51.158.150.178:9117',
   // Jacket API key
-  jackettApiKey: process.env.JACKETT_API_KEY || '88hpmre8pe834rg6c0j48neitzrm6l6b',
+  jackettApiKey: process.env.JACKETT_API_KEY || 'nk0car3t9aqkpzj1aad03nbwqmk3oxc3',
   //  The Movie Database Access Token. Configure to use TMDB rather than cinemeta.
   tmdbAccessToken: process.env.TMDB_ACCESS_TOKEN || '6f5528da1d383de1b85c80756d82372e', 
   // Data folder for cache database, torrent files ... Must be persistent in production
@@ -50,7 +50,7 @@ export default {
     forceCacheNextEpisode: (process.env.DEFAULT_FORCE_CACHE_NEXT_EPISODE || 'false') === 'true',
     sortCached: sortCommaListToArray(process.env.DEFAULT_SORT_CACHED || 'quality:true, size:true'),
     sortUncached: sortCommaListToArray(process.env.DEFAULT_SORT_UNCACHED || 'seeders:true'),
-    indexers: commaListToArray(process.env.DEFAULT_INDEXERS || 'hdhome,hdsky,pterclub,pttime'),
+    indexers: commaListToArray(process.env.DEFAULT_INDEXERS || 'hdsky,pterclub,totheglorycookie'),
     indexerTimeoutSec: parseInt(process.env.DEFAULT_INDEXER_TIMEOUT_SEC || '60'),
     passkey: ''
   },
