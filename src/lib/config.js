@@ -4,9 +4,9 @@ export default {
   // https://expressjs.com/en/guide/behind-proxies.html
   trustProxy: boolOrString(process.env.TRUST_PROXY || 'loopback, linklocal, uniquelocal'),
   // Jacket instance url
-  jackettUrl: process.env.JACKETT_URL || 'http://1.14.73.37:9117',
+  jackettUrl: process.env.JACKETT_URL || 'http://27.10.130.174:9117/',
   // Jacket API key
-  jackettApiKey: process.env.JACKETT_API_KEY || 'ft950g440swlqnrk8vpu35s533ok1fo8',
+  jackettApiKey: process.env.JACKETT_API_KEY || '88hpmre8pe834rg6c0j48neitzrm6l6b',
   //  The Movie Database Access Token. Configure to use TMDB rather than cinemeta.
   tmdbAccessToken: process.env.TMDB_ACCESS_TOKEN || '6f5528da1d383de1b85c80756d82372e', 
   // Data folder for cache database, torrent files ... Must be persistent in production
@@ -16,11 +16,11 @@ export default {
   // Addon ID
   addonId: process.env.ADDON_ID || 'hy.stremio.jackettio',
   // Addon Name
-  addonName: process.env.ADDON_NAME || 'hyJackettio',
+  addonName: process.env.ADDON_NAME || 'hyJackeddio',
   // Addon Description
   addonDescription: process.env.ADDON_DESCRIPTION || 'Stremio addon that resolve streams using Jackett and Debrid. It seamlessly integrates with private trackers.',
   // Addon Icon
-  addonIcon: process.env.ADDON_ICON || 'https://avatars.githubusercontent.com/u/15383019?s=48&v=4',
+  addonIcon: process.env.ADDON_ICON || 'https://hy-torrentio.surge.sh/configure_files/h_y-high-resolution-logo-transparent.png',
   // When hosting a public instance with a private tracker, you must configure this setting to:
   // - Request the user's passkey on the /configure page.
   // - Replace your passkey "REPLACE_PASSKEY" with theirs when sending uncached torrents to the debrid.
@@ -42,15 +42,15 @@ export default {
   rateLimitRequest: parseInt(process.env.RATE_LIMIT_REQUEST || 150),
 
   defaultUserConfig: {
-    qualities: commaListToArray(process.env.DEFAULT_QUALITIES || '0, 720, 1080').map(v => parseInt(v)),
+    qualities: commaListToArray(process.env.DEFAULT_QUALITIES || '1080,4k').map(v => parseInt(v)),
     excludeKeywords: commaListToArray(process.env.DEFAULT_EXCLUDE_KEYWORDS || ''),
-    maxTorrents: parseInt(process.env.DEFAULT_MAX_TORRENTS || 8),
+    maxTorrents: parseInt(process.env.DEFAULT_MAX_TORRENTS || 10),
     priotizeLanguages: commaListToArray(process.env.DEFAULT_PRIOTIZE_LANGUAGES || ''),
     priotizePackTorrents:  parseInt(process.env.DEFAULT_PRIOTIZE_PACK_TORRENTS || 2),
     forceCacheNextEpisode: (process.env.DEFAULT_FORCE_CACHE_NEXT_EPISODE || 'false') === 'true',
     sortCached: sortCommaListToArray(process.env.DEFAULT_SORT_CACHED || 'quality:true, size:true'),
     sortUncached: sortCommaListToArray(process.env.DEFAULT_SORT_UNCACHED || 'seeders:true'),
-    indexers: commaListToArray(process.env.DEFAULT_INDEXERS || 'all'),
+    indexers: commaListToArray(process.env.DEFAULT_INDEXERS || 'hdhome,hdsky,pterclub,pttime'),
     indexerTimeoutSec: parseInt(process.env.DEFAULT_INDEXER_TIMEOUT_SEC || '60'),
     passkey: ''
   },
