@@ -16,7 +16,7 @@ export default {
   // Addon ID
   addonId: process.env.ADDON_ID || 'hy.stremio.jackettio',
   // Addon Name
-  addonName: process.env.ADDON_NAME || 'hyJackettio',
+  addonName: process.env.ADDON_NAME || 'Jackettio',
   // Addon Description
   addonDescription: process.env.ADDON_DESCRIPTION || 'Stremio addon that resolve streams using Jackett and Debrid. It seamlessly integrates with private trackers.',
   // Addon Icon
