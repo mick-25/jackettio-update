@@ -8,7 +8,7 @@ export default {
   // Jacket API key
   jackettApiKey: process.env.JACKETT_API_KEY || 'ft950g440swlqnrk8vpu35s533ok1fo8',
   //  The Movie Database Access Token. Configure to use TMDB rather than cinemeta.
-  tmdbAccessToken: process.env.TMDB_ACCESS_TOKEN || '6a5be4999abf74eba1f9a8311294c267', 
+  tmdbAccessToken: process.env.TMDB_ACCESS_TOKEN || '', 
   // Data folder for cache database, torrent files ... Must be persistent in production
   dataFolder: process.env.DATA_FOLDER || '/tmp',
   // Enable localtunnel feature
